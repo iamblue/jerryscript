@@ -80,11 +80,11 @@ make -f targets/RTOS/Makefile.mbed board=stm32f4 jerry
 
 2. The next rule is the `js2c`. This rule calls a `js2c.py` python script from the `jerryscript/targets/tools` and creates the JavaScript builtin file into the `targets/mbed/source/` folder. This file is the `jerry_targetjs.h`. You can run this rule with the follwoing command:
 
-  - `make -f targets/mbed/Makefile.mbed board=$(TARGET) js2c`
+  - `make -f targets/RTOS/Makefile.mbed board=stm32f4 js2c`
 
 3. Optional rule: `clean`. It removes the build folder from the mbed and jerry. You can run this rule with this command:
 
-  - `make -f targets/mbed/Makefile.mbed board=$(TARGET) clean`
+  - `make -f targets/RTOS/Makefile.mbed board=stm32f4 clean`
 
 4. copy ./jerry-core into LinkIt RTOS SDK./middleware
 ###Note
